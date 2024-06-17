@@ -1,7 +1,6 @@
 import "./style.css";
 import getWeather from "./getWeather";
-
-const weatherIcon = document.getElementById("weatherIcon");
+import showInfo from "./showAllWeatherInfo";
 
 const inputWeather = document.getElementById("inputWeather");
 const searchBtn = document.getElementById("searchBtn");
@@ -14,7 +13,42 @@ searchBtn.addEventListener("click", () => {
         console.log("Location not found");
       } else {
         console.log(weatherData);
-        weatherIcon.src = weatherData.icon;
+        const {
+          name,
+          country,
+          tz_id,
+          localtime,
+          temp_c,
+          temp_f,
+          text,
+          icon,
+          wind_kph,
+          wind_dir,
+          pressure_mb,
+          precip_mm,
+          humidity,
+          cloud,
+          uv,
+          gust_kph,
+        } = weatherData;
+        showInfo(
+          icon,
+          text,
+          temp_c,
+          temp_f,
+          name,
+          country,
+          tz_id,
+          localtime,
+          wind_kph,
+          wind_dir,
+          precip_mm,
+          pressure_mb,
+          humidity,
+          cloud,
+          uv,
+          gust_kph
+        );
       }
     })
     .catch((error) => {
