@@ -1,10 +1,19 @@
-import { hello } from "./hello";
-import "./style.css";
-import myPic from "./haruhiro.jpg";
+import getWeather from "./getWeather";
 
-const myProfilePic = document.getElementById("myProfilePic");
-const h1 = document.querySelector("h1");
+const inputWeather = document.getElementById("inputWeather");
+const searchBtn = document.getElementById("searchBtn");
 
-myProfilePic.src = myPic;
-
-h1.innerText = hello();
+searchBtn.addEventListener("click", () => {
+  let weatherData = getWeather(inputWeather.value);
+  weatherData
+    .then((message) => {
+      if (message.error) {
+        console.log("Location not found");
+      } else {
+        console.log("Weather:", message);
+      }
+    })
+    .catch((error) => {
+      console.error("Unexpected error:", error);
+    });
+});
