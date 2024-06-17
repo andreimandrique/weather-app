@@ -34,19 +34,19 @@ function showInfo(
 ) {
   weatherIconPic.src = weatherIcon;
   weatherMyText.textContent = weatherText;
-  tempCText.textContent = tempC;
-  tempFText.textContent = tempF;
+  tempCText.textContent = `${tempC}`;
+  tempFText.textContent = `${tempF}`;
   cityNameText.textContent = cityName;
   countryAndtzIdText.textContent = `${country} ${tz_id}`;
   localTimeText.textContent = localTime;
-  windKPHText.textContent = windKPH;
-  windDirText.textContent = windDir;
-  precipMMText.textContent = precipMM;
-  pressureMBText.textContent = pressureMB;
-  humidityText.textContent = humidity;
-  cloudText.textContent = cloud;
-  uvText.textContent = uv;
-  gustKPHText.textContent = gustKPH;
+  windKPHText.textContent = `Wind KPH: ${windKPH}`;
+  windDirText.textContent = `Wind Direction: ${windDir}`;
+  precipMMText.textContent = `Precip: ${precipMM}`;
+  pressureMBText.textContent = `Pressure: ${pressureMB}`;
+  humidityText.textContent = `Humidity: ${humidity}`;
+  cloudText.textContent = `Cloud: ${cloud}`;
+  uvText.textContent = `Uv: ${uv}`;
+  gustKPHText.textContent = `GustKHP: ${gustKPH}`;
 }
 
 export default showInfo;

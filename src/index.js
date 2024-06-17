@@ -1,6 +1,8 @@
 import "./style.css";
+import defaultWeather from "./defaultWeather.png";
 import getWeather from "./getWeather";
-import showInfo from "./showAllWeatherInfo";
+import showInfo from "./showInfo";
+import { format } from "date-fns/format";
 
 const inputWeather = document.getElementById("inputWeather");
 const searchBtn = document.getElementById("searchBtn");
@@ -31,6 +33,9 @@ searchBtn.addEventListener("click", () => {
           uv,
           gust_kph,
         } = weatherData;
+
+        const myDate = format(localtime, "p eeee PPP");
+
         showInfo(
           icon,
           text,
@@ -39,7 +44,7 @@ searchBtn.addEventListener("click", () => {
           name,
           country,
           tz_id,
-          localtime,
+          myDate,
           wind_kph,
           wind_dir,
           precip_mm,
@@ -55,3 +60,5 @@ searchBtn.addEventListener("click", () => {
       console.error("Unexpected error:", error);
     });
 });
+
+document.getElementById("weatherIcon").src = defaultWeather;

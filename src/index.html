@@ -7,13 +7,25 @@
   <body>
     <div class="container">
       <div class="search-container">
-        <input class="input-weather" type="text" id="inputWeather" />
+        <input
+          class="input-weather"
+          type="text"
+          id="inputWeather"
+          placeholder="Input City Name Here ..."
+        />
         <button class="search-btn" id="searchBtn">Search</button>
       </div>
       <div class="main-container">
         <div class="icon-container">
-          <img alt="Weather Icon" id="weatherIcon" src="#" />
-          <p class="text-l" id="weatherMyText">Sunny</p>
+          <div>
+            <img
+              class="weather-icon"
+              id="weatherIcon"
+              alt="Weather Icon"
+              src="#"
+            />
+          </div>
+          <p class="text-l" id="weatherMyText">Weather Text</p>
         </div>
         <div class="temp-container">
           <div><p class="text-l" id="tempC">Celcious</p></div>
@@ -21,29 +33,38 @@
         </div>
       </div>
       <div class="location-container">
-        <div><p class="text-m" id="cityName">Manila</p></div>
+        <div><p class="text-m" id="cityName">City Name</p></div>
         <div>
-          <p class="text-m" id="countryAndtzId">Philippines Manila,Asia</p>
+          <p class="text-m" id="countryAndtzId">Country Name</p>
         </div>
-        <div><p class="text-m" id="localTime">2024-06-17</p></div>
+        <div><p class="text-m" id="localTime">Local Date and Time</p></div>
       </div>
       <div class="bottom-container">
         <div>
-          <div><p class="text-m" id="windKPH">Random Text</p></div>
-          <div><p class="text-m" id="windDir">Random Text</p></div>
+          <p class="text-s" id="windKPH">Wind KPH</p>
+          <p class="text-s" id="windDir">Wind Direction</p>
         </div>
         <div>
-          <div><p class="text-m" id="precipMM">Random Text</p></div>
-          <div><p class="text-m" id="pressureMB">Random Text</p></div>
+          <p class="text-s" id="precipMM">Precip</p>
+          <p class="text-s" id="pressureMB">Pressure</p>
         </div>
         <div>
-          <div><p class="text-m" id="humidity">Random Text</p></div>
-          <div><p class="text-m" id="cloud">Random Text</p></div>
+          <p class="text-s" id="humidity">Humidity</p>
+          <p class="text-s" id="cloud">Clouds</p>
         </div>
         <div>
-          <div><p class="text-m" id="uv">Random Text</p></div>
-          <div><p class="text-m" id="gustKPH">Random Text</p></div>
+          <p class="text-s" id="uv">Uv</p>
+          <p class="text-s" id="gustKPH">Gust KPH</p>
         </div>
+      </div>
+
+      <div class="weatherAPI-Preview">
+        <div>Powered by</div>
+        <a href="https://www.weatherapi.com/" title="Free Weather API">
+          <img
+            src="//cdn.weatherapi.com/v4/images/weatherapi_logo.png"
+            alt="Weather data by WeatherAPI.com"
+        /></a>
       </div>
     </div>
   </body>
