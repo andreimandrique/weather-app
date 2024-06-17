@@ -9,6 +9,7 @@ async function getWeather(location) {
       name: data.location.name,
       country: data.location.country,
       tz_id: data.location.tz_id,
+      localtime: data.location.localtime,
       temp_c: `${data.current.temp_c} °C`,
       temp_f: `${data.current.temp_f} °F`,
       text: data.current.condition.text,

@@ -1,16 +1,20 @@
+import "./style.css";
 import getWeather from "./getWeather";
+
+const weatherIcon = document.getElementById("weatherIcon");
 
 const inputWeather = document.getElementById("inputWeather");
 const searchBtn = document.getElementById("searchBtn");
 
 searchBtn.addEventListener("click", () => {
-  let weatherData = getWeather(inputWeather.value);
-  weatherData
-    .then((message) => {
-      if (message.error) {
+  let data = getWeather(inputWeather.value);
+  data
+    .then((weatherData) => {
+      if (weatherData.error) {
         console.log("Location not found");
       } else {
-        console.log("Weather:", message);
+        console.log(weatherData);
+        weatherIcon.src = weatherData.icon;
       }
     })
     .catch((error) => {

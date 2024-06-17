@@ -2,10 +2,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Weather App</title>
   </head>
   <body>
-    <input type="text" id="inputWeather" />
-    <button id="searchBtn">Search</button>
+    <div class="container">
+      <div class="search-container">
+        <input class="input-weather" type="text" id="inputWeather" />
+        <button class="search-btn" id="searchBtn">Search</button>
+      </div>
+      <div class="main-container">
+        <div class="icon-container">
+          <img id="weatherIcon" alt="Weather Icon" src="#" />
+          <p class="text-l">Sunny</p>
+        </div>
+        <div class="temp-container">
+          <div><p class="text-l">Celcious</p></div>
+          <div><p class="text-l">Fahrenheit</p></div>
+        </div>
+      </div>
+      <div class="location-container">
+        <div><p class="text-m">Manila</p></div>
+        <div><p class="text-m">Philippines Manila,Asia</p></div>
+        <div><p class="text-m">2024-06-17</p></div>
+      </div>
+      <div class="bottom-container">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
   </body>
 </html>
