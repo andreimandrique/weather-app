@@ -1,6 +1,6 @@
-# webpack-template
+# Weather App
 
-This is my personal webpack-template to get started using webpack in The Odin Project project
+This is the weather app that I created using Javascript and Webpack while learning about API in the The Odin Project Course
 
 In the root folder run
 
