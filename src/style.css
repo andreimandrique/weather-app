@@ -13,15 +13,6 @@
   align-items: center;
   flex-direction: column;
 }
-.weatherAPI-Preview {
-  position: absolute;
-  right: 12px;
-  bottom: 12px;
-}
-.weatherAPI-Preview > div {
-  font-size: 1.2em;
-  margin-bottom: 1em;
-}
 .search-container {
   margin-top: 1rem;
   display: flex;
