@@ -13,6 +13,7 @@ searchBtn.addEventListener("click", () => {
     .then((weatherData) => {
       if (weatherData.error) {
         console.log("Location not found");
+        alert("Location not found");
       } else {
         console.log(weatherData);
         const {

@@ -7,7 +7,6 @@
   --main-color: black;
 }
 .container {
-  position: relative;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
